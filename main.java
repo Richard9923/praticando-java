@@ -12,7 +12,7 @@ public class main {
         
        String playerChoice = playerChoice();
        String computerChoice = computerChoice();
-       System.out.println(computerChoice);
+       
        
 
 
@@ -32,6 +32,29 @@ public class main {
         return computerOptions[randomNumber];
     }
 
+    static String gaming(String player, String computer) {
 
+        if (player == computer) {
+            System.out.println("Empate! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            return "empate";
+        }
+        else if (player.equals("pedra") && computer.equals("tesoura")) {
+            System.out.println("Jogador venceu! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            return "venceu";
+        }
+        else if (player.equals("papel") && computer.equals("pedra")) {
+            System.out.println("Jogador venceu! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            return "venceu";
+        }
+        else if (player.equals("tesoura") && computer.equals("papel")) {
+            System.out.println("Jogador venceu! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            return "venceu";
+        }
+        else {
+            System.out.println("Jogador perdeu. Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            return "perdeu";
+        }
+
+    }
     
 }
