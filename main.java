@@ -10,9 +10,6 @@ public class main {
 
     public static void main(String[] args) {
        
-
-
-
         while (gameOn == true) {
             System.out.println("Pontos do jogador: "+playerPoints);
             System.out.println("Pontos do computador: "+computerPoints);
