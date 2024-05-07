@@ -80,6 +80,7 @@ public class main {
 
         }
         else if (resultado.equals("perdeu")) {
+            computerPoints += 1;
             if (computerPoints == 3) {
                 System.out.println("O computador venceu o jogo com "+computerPoints+" pontos. ");
                 System.out.println("Fim do jogo.");
