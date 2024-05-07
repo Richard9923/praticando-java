@@ -10,8 +10,20 @@ public class main {
 
     public static void main(String[] args) {
        
-       String resultadoJogo = gaming(playerChoice(),computerChoice());
-       System.out.println(resultadoJogo);
+        int playerPoints = 0;
+        int computerPoints = 0;
+        boolean gameOn = true;
+
+
+        while (gameOn == true) {
+
+            String resultadoJogo = gaming(playerChoice(),computerChoice());
+            System.out.println(resultadoJogo);
+            verificarVencedor(playerPoints, computerPoints, gameOn);
+
+        }
+       
+       
 
 
     }
@@ -52,6 +64,22 @@ public class main {
             System.out.println("Jogador perdeu. Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
             return "perdeu";
         }
+    }
+
+    static void verificarVencedor(int playerPoints, int computerPoints, boolean gameOn) {
+
+        if (playerPoints == 3) {        
+            System.out.println("O jogador venceu o jogo com "+playerPoints+" pontos. ");
+            System.out.println("Fim do jogo.");
+            gameOn = false;
+        }
+        else if (computerPoints == 3) {
+            System.out.println("O computador venceu o jogo com "+computerPoints+" pontos. ");
+            System.out.println("Fim do jogo.");
+            gameOn = false;
+
+        }
+
     }
     
 }
