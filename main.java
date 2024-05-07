@@ -9,11 +9,9 @@ public class main {
 
 
     public static void main(String[] args) {
-        
-       String playerChoice = playerChoice();
-       String computerChoice = computerChoice();
        
-       
+       String resultadoJogo = gaming(playerChoice(),computerChoice());
+       System.out.println(resultadoJogo);
 
 
     }
@@ -34,8 +32,8 @@ public class main {
 
     static String gaming(String player, String computer) {
 
-        if (player == computer) {
-            System.out.println("Empate! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+        if (player.equals(computer)) {
+            System.out.println("Empate. Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
             return "empate";
         }
         else if (player.equals("pedra") && computer.equals("tesoura")) {
@@ -54,7 +52,6 @@ public class main {
             System.out.println("Jogador perdeu. Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
             return "perdeu";
         }
-
     }
     
 }
