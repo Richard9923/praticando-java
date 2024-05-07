@@ -11,7 +11,9 @@ public class main {
     public static void main(String[] args) {
         
        String playerChoice = playerChoice();
-       System.out.println(playerChoice);
+       String computerChoice = computerChoice();
+       System.out.println(computerChoice);
+       
 
 
     }
@@ -23,6 +25,12 @@ public class main {
     
     }
 
+    static String computerChoice() {
+        Random random = new Random();
+        String[] computerOptions = {"pedra", "papel", "tesoura"};
+        int randomNumber = random.nextInt(0, computerOptions.length);
+        return computerOptions[randomNumber];
+    }
 
 
     
