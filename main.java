@@ -16,10 +16,7 @@ public class main {
 
             String resultadoJogo = gaming(playerChoice(),computerChoice());
             verificarVencedor(resultadoJogo);
-
-        }
-       
-
+        }    
     }
 
     static String playerChoice() {
@@ -86,8 +83,6 @@ public class main {
             else {
                 System.out.println("Continuando o jogo.");
             }
-
-
         }
 
     }
