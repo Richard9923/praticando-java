@@ -5,15 +5,21 @@ import java.util.Random;
 
 public class main {
 
+    
 
 
     public static void main(String[] args) {
         
-        
+        playerChoice();
 
     }
 
-    void playerChoice() {
-        System.out.println("teste");
+    static void playerChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Escolha entre pedra papel e tesoura.");
+        scanner.nextLine();
+    
     }
+
+    
 }
