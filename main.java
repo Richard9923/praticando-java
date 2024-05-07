@@ -10,16 +10,20 @@ public class main {
 
     public static void main(String[] args) {
         
-        playerChoice();
+       String playerChoice = playerChoice();
+       System.out.println(playerChoice);
+
 
     }
 
-    static void playerChoice() {
+    static String playerChoice() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escolha entre pedra papel e tesoura.");
-        scanner.nextLine();
+        return scanner.nextLine();
     
     }
+
+
 
     
 }
