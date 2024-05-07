@@ -4,15 +4,13 @@ import java.util.Random;
 
 
 public class main {
-
-    
-
+    static int playerPoints = 0;
+    static int computerPoints = 0;
+    static boolean gameOn = true;
 
     public static void main(String[] args) {
        
-        int playerPoints = 0;
-        int computerPoints = 0;
-        boolean gameOn = true;
+
 
 
         while (gameOn == true) {
@@ -20,7 +18,7 @@ public class main {
             System.out.println("Pontos do computador: "+computerPoints);
 
             String resultadoJogo = gaming(playerChoice(),computerChoice());
-            verificarVencedor(playerPoints, computerPoints, resultadoJogo, gameOn);
+            verificarVencedor(resultadoJogo);
 
         }
        
@@ -67,7 +65,7 @@ public class main {
         }
     }
 
-    static void verificarVencedor(int playerPoints, int computerPoints, String resultado, boolean gameOn) {
+    static void verificarVencedor(String resultado) {
 
         if (resultado.equals("venceu")) {    
             playerPoints +=1;
