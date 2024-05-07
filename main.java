@@ -16,8 +16,10 @@ public class main {
 
 
         while (gameOn == true) {
+            System.out.println("Pontos do jogador: "+playerPoints);
+            System.out.println("Pontos do computador: "+computerPoints);
 
-            String resultadoJogo = gaming(playerChoice(),computerChoice());
+            String resultadoJogo = gaming(playerChoice(),computerChoice(), playerPoints, computerPoints);
             System.out.println(resultadoJogo);
             verificarVencedor(playerPoints, computerPoints, gameOn);
 
@@ -42,7 +44,7 @@ public class main {
         return computerOptions[randomNumber];
     }
 
-    static String gaming(String player, String computer) {
+    static String gaming(String player, String computer, int playerPoints, int computerPoints) {
 
         if (player.equals(computer)) {
             System.out.println("Empate. Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
@@ -50,18 +52,24 @@ public class main {
         }
         else if (player.equals("pedra") && computer.equals("tesoura")) {
             System.out.println("Jogador venceu! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            playerPoints ++;
             return "venceu";
         }
         else if (player.equals("papel") && computer.equals("pedra")) {
             System.out.println("Jogador venceu! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            playerPoints ++;
             return "venceu";
+            
         }
         else if (player.equals("tesoura") && computer.equals("papel")) {
             System.out.println("Jogador venceu! Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            playerPoints ++;
             return "venceu";
+            
         }
         else {
             System.out.println("Jogador perdeu. Escolha do jogador: "+player+". Escolha do computador: "+computer+".");
+            computerPoints ++;
             return "perdeu";
         }
     }
